@@ -2,6 +2,7 @@ import Vue from 'vue';
 import VueRouter, { RouteConfig } from 'vue-router';
 import Home from '../views/Home.vue';
 import About from '../views/About.vue';
+import NotFound from '../views/NotFound.vue';
 import UserPage from '../components/UserPage.vue';
 
 Vue.use(VueRouter);
@@ -22,6 +23,11 @@ const routes: Array<RouteConfig> = [
     path: '/about',
     name: 'About',
     component: About,
+  },
+  {
+    path: '/:catchAll(.*)',
+    name: 'NotFound',
+    component: NotFound,
   },
 ];
 
