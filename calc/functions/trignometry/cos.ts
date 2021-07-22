@@ -1,5 +1,5 @@
-export const cos = (form: HTMLFormElement): void => {
-  form.display.value = Math.cos(form.display.value);
+export const cos = (value: number) => {
+  return Math.cos(value);
 };
 
 export default cos;

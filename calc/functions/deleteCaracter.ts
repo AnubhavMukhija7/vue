@@ -1,5 +1,5 @@
-const deleteChar = (input: HTMLInputElement): void => {
-  input.value = input.value.substring(0, input.value.length - 1);
+const deleteChar = (value: string) => {
+  return value.substring(0, value.length - 1);
 };
 
 export default deleteChar;

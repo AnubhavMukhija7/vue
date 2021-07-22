@@ -1,5 +1,5 @@
-const tan = (form: HTMLFormElement): void => {
-  form.display.value = Math.tan(form.display.value);
+const tan = (value: number) => {
+  return Math.tan(value);
 };
 
 export default tan;

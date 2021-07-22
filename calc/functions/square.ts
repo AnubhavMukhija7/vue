@@ -1,5 +1,5 @@
-const square = (form: HTMLFormElement): void => {
-  form.display.value = +form.display.value * +form.display.value;
+const square = (value: number) => {
+  return value * value;
 };
 
 export default square;

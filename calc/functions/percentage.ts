@@ -1,7 +1,7 @@
 let val = 0.0;
-const percent = (input: HTMLInputElement): void => {
-  val = +input.value;
-  input.value = input.value + '%';
+const percent = (value: number) => {
+  val = value;
+  return value + '%';
 };
 
 export default percent;

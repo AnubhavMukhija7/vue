@@ -1,5 +1,5 @@
-const ln = (form: HTMLFormElement): void => {
-  form.display.value = Math.log(form.display.value);
+const ln = (value: number) => {
+  return Math.log(value);
 };
 
 export default ln;

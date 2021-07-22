@@ -1,5 +1,5 @@
-const sqrt = (form: HTMLFormElement): void => {
-  form.display.value = Math.sqrt(form.display.value);
+const sqrt = (value: number) => {
+  return Math.sqrt(value);
 };
 
 export default sqrt;

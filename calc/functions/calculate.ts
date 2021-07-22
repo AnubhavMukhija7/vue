@@ -1,5 +1,7 @@
-const compute = (form: HTMLFormElement): void => {
-  form.display.value = eval(form.display.value);
+const compute = (value: string): number => {
+  const result = eval(value);
+  if (result) return result;
+  return 0;
 };
 
 export default compute;
