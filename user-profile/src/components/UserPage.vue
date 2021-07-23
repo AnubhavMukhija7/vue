@@ -19,7 +19,6 @@
         <p v-if="key !== 'address' && key !== 'company'">
           {{ key }} - {{ value }}
         </p>
-        <!-- some better solution? -->
         <div v-if="key === 'address'">
           <p v-for="(val, addKey, index) in value" :key="index">
             {{ addKey }} - {{ val }}

@@ -20,6 +20,11 @@ const routes: Array<RouteConfig> = [
     component: UserPage,
   },
   {
+    path: '/user/:id',
+    name: 'UserPageWithId',
+    component: UserPage,
+  },
+  {
     path: '/about',
     name: 'About',
     component: About,
