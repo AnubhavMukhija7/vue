@@ -1,11 +1,11 @@
-import { functions } from '../interface/interface';
+import { Functions } from '../interface/interface';
 export class Calculator {
   private value: string;
 
   constructor() {
     this.value = '0';
   }
-  public calculateResult(value: string, functionName: functions) {
+  public calculateResult(value: string, functionName: Functions) {
     this.value = value;
     if (functionName === 'compute') this.compute();
     else if (functionName === 'clear') this.allClear();

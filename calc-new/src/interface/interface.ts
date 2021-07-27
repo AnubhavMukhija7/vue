@@ -1,1 +1,1 @@
-export type functions = 'delete' | 'clear' | 'compute';
+export type Functions = 'delete' | 'clear' | 'compute';

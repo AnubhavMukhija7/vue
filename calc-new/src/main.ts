@@ -1,19 +1,22 @@
 import { Calculator } from './calculator/calculator';
-import { functions } from './interface/interface';
+import { Functions } from './interface/interface';
 
 const calculator = new Calculator();
 const input = document.getElementById('input') as HTMLInputElement;
 const clear = document.getElementById('clear') as HTMLInputElement;
 const backSpace = document.getElementById('delete') as HTMLInputElement;
 const compute = document.getElementById('compute') as HTMLInputElement;
-// const operations = Array.from(document.getElementsByClassName('addValue'));
+const operations = document.querySelectorAll('input');
+const operationsArray: HTMLInputElement[] =
+  Array.prototype.slice.call(operations);
 
-// operations.forEach((element) => {
-//   element.addEventListener('click', () => {
-//     input.value += element.innerHTML;
-//     console.log(input.value);
-//   });
-// });
+operationsArray.forEach((element) => {
+  if (element.id === '') {
+    element.addEventListener('click', () => {
+      input.value = input.value + element.value;
+    });
+  }
+});
 
 clear.addEventListener('click', () => {
   getResult('clear');
@@ -27,11 +30,11 @@ compute.addEventListener('click', () => {
   getResult('compute');
 });
 
-const getResult = (functionName: functions) => {
+const getResult = (functionName: Functions) => {
   calculator.calculateResult(input.value, functionName);
   setResult();
 };
 
 const setResult = () => {
-  input.innerHTML = calculator.getResult();
+  input.value = calculator.getResult();
 };
